@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Auto trgovina</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <script type="text/javascript" src="javascript.js"></script>
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</head>
+<body>
+    
+    <!--Ovo je header-->
+    <div id="header">
+        <div id="logo-container">
+            <span class="logo-txt-1">AUTO</span>
+            <span class="logo-txt-2">TRGOVINA</span>
+        </div>
+        <div id="user-container">
+            <button onclick="" class="user-btn">REGISTRACIJA</button>
+            <button onclick="" class="user-btn">PRIJAVA</button>
+        </div>
+    </div>
+    <!--Ovo je glavni dio stranice-->
+    <div id="main-container">
+        <div id="main-container-left">
+            <!-- Filteri za auto pretragu -->
+            <div class="car-filter-menu">
+                <button onclick="ToggleFunc(this)" class="collapsible">Vrsta vozila</button>
+                <div class="filter-content">
+                    <select name="carsTypes" class="carDropdowns" id="carType">
+                        <option value="volvo">Malo auto</option>
+                        <option value="saab">Limuzina</option>
+                        <option value="mercedes">Kombi</option>
+                        <option value="audi">Teretno</option>
+                    </select>
+                </div>
+                <button onclick="ToggleFunc(this)" class="collapsible">Marka vozila</button>
+                <div class="filter-content">
+                    <select name="carsModels" class="carDropdowns" id="carModel">
+                        <option value="volvo">Volvo</option>
+                        <option value="saab">Saab</option>
+                        <option value="mercedes">Mercedes</option>
+                        <option value="audi">Audi</option>
+                    </select>
+                </div>
+                <button onclick="ToggleFunc(this)" class="collapsible">Godište vozila</button>
+                <div class="filter-content">
+                    <form id="carYear" class="filterForm">
+                        <label>OD</label>
+                        <input type="number" id="godinaOd" class="inputField"><br>
+                        <label>DO</label>
+                        <input type="number" id="godinaDo" class="inputField">
+                    </form>
+                </div>
+                <button onclick="ToggleFunc(this)" class="collapsible">Cijena vozila</button>
+                <div class="filter-content">
+                    <form id="carPrice" class="filterForm">
+                        <label>OD</label>
+                        <input type="number" id="cijenaOd" class="inputField"><br>
+                        <label>DO</label>
+                        <input type="number" id="cijenaDo" class="inputField">
+                    </form>
+                </div>
+                <button onclick="ToggleFunc(this)" class="collapsible">Vrijednost vozila</button>
+                <div class="filter-content">
+                    <select name="carsValue" class="carDropdowns" id="carValue">
+                    <option value="volvo">Polovno</option>
+                    <option value="saab">Novo</option>
+                </select>
+            </div>
+            </div>
+            <button onclick="" class="searchCars">Pretraga</button>
+        </div>
+        <!--Ovo je content container-->
+        <div id="main-container-right">
+        </div>
+    </div>
+    <!--Ovo je footer-->
+    <div id="footer">
+        <p><span style="color: #ffca06;">AUTO</span>TRGOVINA  je internet trgovina koja se bavi prodajom novih i polovnih automobila.</p>
+        <p>Copyright &copy Ante Maric | Email: ante.maric@fpmoz.sum.ba | Tel: 061 724 979</p>
+    </div>
+</body>
+</html>

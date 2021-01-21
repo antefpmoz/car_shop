@@ -1,0 +1,668 @@
+:root{
+    --black1: #121212;
+    --black2:#080808;
+    --white:#F2F2F2;
+    --grey1:rgb(219, 217, 217);
+    --grey2:#BDBDBD;
+    --grey3:#AAAAAA;
+    --green1: #9ACD32;
+    --green2: #ADFF2F;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+*:focus{
+    outline: none;
+}
+
+body {
+    width: 100%;
+    background-color: var(--white);
+    font-family: Arial, Helvetica, sans-serif;
+}
+a {
+    text-decoration: none;
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*----------------------------------*/
+/* Ovo je CSS za DESKTOP i za TABLET*/
+/*----------------------------------*/
+
+@media (min-width: 415px){
+
+/* REGISTRATION MODAL */
+    .login-modal-background{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(219, 217, 217, 0.8);
+        position: fixed;
+        display: none;
+    }
+    .registration-modal{
+        background-color: var(--white);
+        border: 1px solid var(--grey3);
+        width: 100%;
+        min-height: calc(100vh - 6rem);
+        margin: auto;
+    }
+    .user-form{
+        margin: auto;
+        font-size: small;
+        margin: 5% auto auto auto;
+        width: 20vw;
+    }
+    .user-input{
+        border: 1px solid var(--grey2);
+        border-radius: 0.2rem;
+        padding: 3px;
+        height: 2rem;
+        width:100%;
+    }
+    .registerbtn{
+        margin: 2rem auto auto auto;
+        padding: 1rem 2.1rem;
+        border: none;
+        background-color: #9ACD32;
+        cursor: pointer;
+        font-weight: bold;
+        width: 100%;
+
+    }
+    .registerbtn:hover{
+        background-color: #ADFF2F;
+    }
+    .fieldError{
+        display: none;
+        text-align: center;
+    }
+    .regError{
+        color:crimson;
+        margin-top: 0.05rem;
+        width: 100%;
+        text-align: center;
+    }
+    .successMsg{
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+        font-size: x-large;
+        color: #9ACD32;
+    }
+
+
+/* POCETAK CSS za header */
+    #header {
+        width: 100%;
+        height: 3rem;
+        background-color: var(--black1);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logo-container{
+        width: 40%;
+        margin-left: 1rem;
+    }
+
+    .logo-txt-1{
+        color: #ffca06;
+        font-weight: 900; 
+        font-size: larger;
+    }
+
+    .logo-txt-2{
+        color:#F2F2F2; 
+        font-weight: 900; 
+        font-size: larger;
+    }
+
+    #user-container{
+        width: 60%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 0 0.3rem;
+    }
+
+    .user-btn{
+        padding: 0 0.3rem;
+        border: none;
+        font-weight: 600;
+        background-color: inherit;
+        color: var(--white);
+        margin-left: 0.5rem;
+    }
+
+    .user-btn:hover{
+        color: #ffca06;
+    }
+
+    .user-btn:focus{
+        outline: none;
+    }
+
+/* POCETAK CSS za main container */    
+    #main-container{
+        width:100%;
+        height: calc(100vh - 3rem);
+        display: flex;
+        flex-direction: row;
+    }
+
+/* POCETAK CSS za car filter container */
+    #main-container-left{
+        width:20%;
+        display: flex;
+        flex-direction: column;
+        background-color:  var(--grey1);
+        overflow: scroll;
+    }
+
+    .collapsible{
+        width: 100%;
+        height: 3rem;
+        border-radius: 0px;
+        border:none;
+        border-bottom: 0.1rem solid var(--grey3);
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .collapsible:hover{
+        background-color: var(--grey2);
+    }
+
+    .filter-content{
+        background-color: var(--grey1);
+        display: none;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carDropdowns{
+        width: 80%;
+        height: 1.5rem;
+        border: none;
+        border-radius: 0.3rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .filterForm{
+        padding: 0.3rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-size: 0.7rem;
+        justify-content: space-between;
+    }
+
+    .inputField{
+        border: none;
+        border-radius: 0.3rem;
+        height: 1.5rem;
+        width: 40%;
+        text-align: center;
+    }
+
+    .searchCars{
+        width: 100%;
+        border: none;
+        background-color: var(--green1);
+        border-radius: 0;
+        min-height: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--white);
+    }
+
+    .searchCars:hover,
+    .loginBtn:hover{
+        background-color: var(--green2);
+    }
+
+/* POCETAK CSS za right container */
+    #main-container-right{
+        width:80%;
+        overflow: scroll;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 260px;
+    }
+
+/*POCETAK CSS za footer*/
+    #footer {
+        width: 100%;
+        height: 3rem;
+        background-color: var(--black1);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        color: #F2F2F2; 
+        font-size: 0.8rem;
+    }
+    
+/*POCETAK CSS za modale*/
+    .car-full-view{
+        border: 0.05rem solid var(--grey1);
+        width: 90%;
+        height: 14.9rem;
+        margin: 1rem 0.5rem 0.5rem 1rem;
+    }
+    .car-image-view{
+        border-bottom:0.05rem solid var(--grey1);
+        width: 100%;
+        height: 12rem;
+    }
+    .car-image-view img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .car-title-view{
+        width: 100%;
+        height: 2.75rem;
+    }
+    
+    .car-buy{
+        border:none;
+        border-right:0.05rem solid var(--grey1);
+        width: 30%;
+        height: 2.75rem;
+        cursor: pointer;
+        background-color: #9ACD32;
+    }
+    .car-buy img {
+        width: 60%;
+        height: 60%;
+    }
+
+    .car-open-description{
+        float: right;
+        width: 70%;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: small;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+    }
+
+    .car-description-view{
+        position: relative;
+        background-color: var(--white);
+        border: 1px solid var(--grey2);
+        border-radius: 0 0 0.4rem 0.4rem;
+        padding: 0.2rem;
+        font-size: small;
+        display: none;
+    }
+    .fieldError{
+        color: red;
+        font-size: small;
+    }
+
+    /* Admin content */
+    .admin-content{
+        background-color: var(--grey1);
+        width: 100%;
+        min-height: calc(100vh - 6rem);
+        display:flex;
+        flex-direction: row;
+    }
+    .manage-car{
+        width: 50%;
+        padding: 2rem;
+        border-right: 1px solid var(--grey3);
+        display: flex;
+        flex-direction: column;
+    } 
+    .manage-car-title{
+        width: 100%;
+        text-align: center;
+        color: green;
+        font-size: large;
+        margin-bottom: 2rem;
+    }
+    .user-input-insert{
+        border: 1px solid var(--grey2);
+        border-radius: 0.2rem;
+        padding: 3px;
+        width:100%;
+    } 
+}
+
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+/*---------------------*/
+/*POCETAK CSS za MOBITEL*/
+/*---------------------*/
+@media (min-width: 360px) and (max-width: 414px) {
+    /* REGISTRATION MODAL */
+    .login-modal-background{
+        width: 100%;
+        height: 100%;
+        background-color: rgb(219, 217, 217, 0.8);
+        position: fixed;
+        display: none;
+    }
+    .registration-modal{
+        background-color: var(--white);
+        border: 1px solid var(--grey3);
+        width: 100%;
+        min-height: calc(100vh - 6rem);
+        margin: auto;
+    }
+    .user-form{
+        margin: auto;
+        font-size: small;
+        margin: 5% auto auto auto;
+        width: 60vw;
+        font-size: small;
+    }
+    .user-input{
+        border: 1px solid var(--grey2);
+        border-radius: 0.2rem;
+        padding: 3px;
+        height: 2rem;
+        width:100%;
+    }
+    .registerbtn{
+        margin: 2rem auto auto auto;
+        padding: 1rem 2.1rem;
+        border: none;
+        background-color: #9ACD32;
+        cursor: pointer;
+        font-weight: bold;
+        width: 100%;
+    }
+
+    .registerbtn:hover{
+        background-color: #ADFF2F;
+    }
+    
+    .regError{
+        color:crimson;
+        margin-top: 0.05rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .successMsg{
+        width: 100%;
+        text-align: center;
+        margin-top: 5%;
+        font-size: x-large;
+        color: #9ACD32;
+    }
+
+    #header {
+        width: 100%;
+        height: 3rem;
+        background-color: var(--black1);
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #logo-container{
+        width: 40%;
+        margin-left: 1rem;
+    }
+
+    #user-container{
+        width: 60%;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 0 0.3rem;
+    }
+
+    .user-btn{
+        padding: 0 0.3rem;
+        border: none;
+        font-weight: 600;
+        background-color: inherit;
+        color: var(--white);
+        margin-left: 0.5rem;
+    }
+
+    .user-btn:hover{
+        color: #ffca06;
+    }
+
+    .user-btn:focus{
+        outline: none;
+    }
+    .logo-txt-1{
+        color: #ffca06;
+        font-weight: 900; 
+        font-size: smaller;
+    }
+
+    .logo-txt-2{
+        color:#F2F2F2; 
+        font-weight: 900; 
+        font-size: smaller;
+    }
+
+    /* POCETAK CSS za car filter container */
+    #main-container-left{
+        width:30%;
+        display: flex;
+        flex-direction: column;
+        background-color:  var(--grey1);
+        overflow: scroll;
+    }
+
+    .collapsible{
+        width: 100%;
+        height: 3rem;
+        border-radius: 0px;
+        border:none;
+        border-bottom: 0.1rem solid var(--grey3);
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    .collapsible:hover{
+        background-color: var(--grey2);
+    }
+
+    .filter-content{
+        background-color: var(--grey1);
+        display: none;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .carDropdowns{
+        width: 80%;
+        height: 1.5rem;
+        border: none;
+        border-radius: 0.3rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .filterForm{
+        padding: 0.3rem;
+        width: 100%;
+        margin: 1rem auto 1rem auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.7rem;
+        justify-content: space-between;
+    }
+
+    .inputField{
+        border: none;
+        border-radius: 0.3rem;
+        height: 1.5rem;
+        width: 80%;
+        text-align: center;
+    }
+
+    .searchCars{
+        width: 100%;
+        border: none;
+        background-color: var(--green1);
+        border-radius: 0;
+        min-height: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--white);
+    }
+
+    .searchCars:hover,
+    .loginBtn:hover{
+        background-color: var(--green2);
+    }
+
+    /* POCETAK CSS za main container */    
+    #main-container{
+        width:100%;
+        height: calc(100vh - 3rem);
+        display: flex;
+        flex-direction: row;
+    }
+    /* POCETAK CSS za right container */
+    #main-container-right{
+        width:70%;
+        overflow: scroll;
+    }
+    /*POCETAK CSS za modale*/
+    .car-full-view{
+        border: 0.05rem solid var(--grey1);
+        width: 90%;
+        height: 14.9rem;
+        margin: 1rem 0.5rem 0.5rem 1rem;
+    }
+    .car-image-view{
+        border-bottom:0.05rem solid var(--grey1);
+        width: 100%;
+        height: 12rem;
+    }
+    .car-image-view img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .car-title-view{
+        width: 100%;
+        height: 2.75rem;
+    }
+    
+    .car-buy{
+        border:none;
+        border-right:0.05rem solid var(--grey1);
+        width: 30%;
+        height: 2.75rem;
+        cursor: pointer;
+        background-color: #9ACD32;
+    }
+    .car-buy img {
+        width: 60%;
+        height: 60%;
+    }
+
+    .car-open-description{
+        float: right;
+        width: 70%;
+        height: 2.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: small;
+        font-weight: bold;
+        cursor: pointer;
+        border: none;
+    }
+
+    .car-description-view{
+        position: relative;
+        background-color: var(--white);
+        border: 1px solid var(--grey2);
+        border-radius: 0 0 0.4rem 0.4rem;
+        padding: 0.2rem;
+        font-size: small;
+        display: none;
+    }
+
+    /*POCETAK CSS za footer*/
+    #footer {
+        position: relative;
+        width: 100%;
+        height: 3rem;
+        background-color: var(--black1);
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        color: #F2F2F2; 
+        font-size: 0.6rem;
+    }
+    /* Admin content */
+    .admin-content{
+        background-color: var(--grey1);
+        width: 100%;
+        min-height: calc(100vh - 6rem);
+        display:flex;
+        flex-direction: column;
+    }
+    .manage-car{
+        width: 100%;
+        padding: 2rem;
+        border-bottom: 1px solid var(--grey3);
+        display: flex;
+        flex-direction: column;
+    } 
+    .manage-car-title{
+        width: 100%;
+        text-align: center;
+        color: green;
+        font-size: large;
+        margin-bottom: 2rem;
+    }
+    .user-input-insert{
+        border: 1px solid var(--grey2);
+        border-radius: 0.2rem;
+        padding: 3px;
+        width:100%;
+    } 
+}
+
+/*POCETAK CSS za scrollbar*/
+::-webkit-scrollbar {
+    display: none;
+  }
