@@ -20,7 +20,7 @@
             if(mysqli_num_rows($result) === 1){
                 $passwordCheck = strcmp($password, $user['password']);
                 $usernameCheck = strcmp($username, $user['username']);
-                $userCheck = $user['usr_type'];
+                $userCheck = $user['user_type'];
 
                 if($passwordCheck!==0){
                     header("Location: ./login.php?error=passwordNotCorrect");

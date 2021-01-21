@@ -1,3 +1,5 @@
+<?php require('./dbfunctions/db_connection.php')?>
+
 <div class="car-full-view">
     <div class="car-image-view"><img src="assets/car-images/vwgolf5.jpeg" /></div>
     <div class="car-title-view">

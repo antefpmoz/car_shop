@@ -50,7 +50,7 @@
             }else{
                 $succes_msg = "Uspijesno ste se registrirali!";
                 $enc_pass = md5($password);
-                $query = "INSERT INTO users(username, password, email, phone, usr_type) VALUES ('$username', '$enc_pass', '$email', '$phone', 2)";
+                $query = "INSERT INTO users(username, password, email, phone, user_type) VALUES ('$username', '$enc_pass', '$email', '$phone', 2);";
         
                 mysqli_query($connect, $query);
             }
