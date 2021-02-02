@@ -6,6 +6,7 @@
     $car_add_message=array();
     $car_remove_errors = array();
     $car_remove_message=array();
+    $car_filter=array();
 
     if(isset($_GET['error'])){
         if($_GET['error'] == "emptyFields"){
@@ -42,6 +43,9 @@
         }
         if($_GET['success']=='carSuccessfullyRemoved'){
             array_push($car_remove_message, "Uspiješno ste uklonili vozilo!");
+        }
+        if($_GET['success']=='noCars'){
+            array_push($car_filter, "</br>Nazalost nema automobila koji zadovoljavaju vasu pretragu!");
         }
     }
 ?>

@@ -1,4 +1,3 @@
 <div id="main-container">
-    <?php include('left-container.php')?>
-    <?php include('right-container.php')?>
+    <?php include('manin-content-container.php')?>
 </div>

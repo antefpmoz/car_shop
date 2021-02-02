@@ -1,6 +1,9 @@
-<?php require('dbfunctions/add_car.php')?>
-<?php require('dbfunctions/remove_car.php')?>
-<?php require('dbfunctions/errors.php')?>
+<?php 
+    
+    require('dbfunctions/add_car.php');
+    require('dbfunctions/remove_car.php');
+    require('dbfunctions/errors.php');
+    ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -70,7 +73,7 @@
                 <div class="regError"><?php foreach($car_add_errors as $value){echo $value, "</br>";}?></div>
             </div>
         </div>
-        <div class="manage-car">
+        <div class="manage-car <?php if(isset($_SESSION['superUserId'])){echo 'hidden';}?>">
             <div class="manage-car-title">Ukloni vozilo</div>
             <div class="manage-car-sides">
             <div class="successMsg"><?php foreach($car_remove_message as $value){echo $value, "</br>";} ?> </div>

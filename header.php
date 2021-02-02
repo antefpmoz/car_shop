@@ -16,8 +16,11 @@
             if(isset($_SESSION['userId'])){
                 echo '<form action="dbfunctions/db_logout.php">
                 <button class="user-btn">ODJAVA</button>
+            </form>
+            <form action="buy.php">
+                <button class="user-btn">KUPOVINA</button>
             </form>';
-            }else if(isset($_SESSION['adminId'])){
+            }else if(isset($_SESSION['adminId']) || isset($_SESSION['superUserId'])){
                 echo '<form action="dbfunctions/db_logout.php">
                 <button class="user-btn">ODJAVA</button>
             </form>
